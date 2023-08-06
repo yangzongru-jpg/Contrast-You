@@ -48,7 +48,7 @@ class SupConLoss1(nn.Module):
             neg_mask = 1 - pos_mask
         return self._forward(proj_feat1, proj_feat2, pos_mask.float(), neg_mask.float(), **kwargs)
 
-    def _forward(self, proj_feat1, proj_feat2, pos_mask, neg_mask, **kwargs):
+    def _forward(self, proj_feat1, proj_feat2, pos_mask, neg_mask, **kwargs):#_forward and forward what is the difference?
         """
         Here the proj_feat1 and proj_feat2 should share the same mask within and cross proj_feat1 and proj_feat2
         :param proj_feat1:
